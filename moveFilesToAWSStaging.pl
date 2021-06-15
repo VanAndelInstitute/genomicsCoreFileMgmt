@@ -12,7 +12,7 @@ use POSIX qw(strftime);
 ##############################################################
 
 @dirs = ( "/secondary/projects/genomicscore/.archive");
-$maxAge = 180;
+$maxAge = 90;
 my $ydm = strftime "%Y%m%d", localtime;
 my $archiveDir = ".uploadToAWS_$ydm";
 print $date;
