@@ -25,7 +25,7 @@ for my $d (@dirs)
     chomp @moveDirList;
     next unless @moveDirList;
     system("mkdir ../$archiveDir") unless -d "../$archiveDir";
-    system("chown \"marie.adams:sequencing technology\" ../$archiveDir") unless -d "../$archiveDir";
+    system("chown \"marie.adams:sequencing technology\" ../$archiveDir") if -d "../$archiveDir";
     email("sequencing-notifications\@vai.org","$d files moved to $archiveDir, older than $maxAge days",join("\n",@moveDirList)); 
 
     for $movedDir (@moveDirList)
@@ -33,7 +33,8 @@ for my $d (@dirs)
         next unless -e $movedDir && -d $movedDir;
         system "mv \"$movedDir\" \"../$archiveDir\""
     }
-    system("chown -R \"marie.adams:sequencing technology\" ../$archiveDir") if -d "../$archiveDir";
+    system("chmod -R +rwX  ../$archiveDir")   if -d "../$archiveDir";
+    system("chown -R \"marie.adams:sequencing technology\" ../$archiveDir")   if -d "../$archiveDir";
 }
 
 
