@@ -16,7 +16,7 @@ $maxAge = 180;
 for my $d (@dirs)
 {
 	next unless -e $d;
-	my $outfull = `find $d -mtime +$maxAge`;
+	my $outfull = `find $d -type d -mtime +$maxAge`;
     email("sequencing-notifications\@vai.org","$d report on files older than $maxAge days",$outfull) if length($outfull) > 5;
 }
 
