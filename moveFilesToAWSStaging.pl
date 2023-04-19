@@ -34,8 +34,8 @@ for my $d (@dirs)
         next unless -e $movedDir && -d $movedDir;
         system "mv \"$movedDir\" \"../$archiveDir\""
     }
-    system("chmod -R +rwX  ../$archiveDir")   if -d "../$archiveDir";
-    system("chown -R marie.adams ../$archiveDir")   if -d "../$archiveDir";
+    system("chmod -R 770  ../$archiveDir")   if -d "../$archiveDir";
+    system("chown -R marie.adams:sequencing-technology ../$archiveDir")   if -d "../$archiveDir";
 }
 
 
