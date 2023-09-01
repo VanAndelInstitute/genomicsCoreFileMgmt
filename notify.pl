@@ -10,7 +10,7 @@ use Net::SMTP;
 #
 ##############################################################
 
-@dirs = ( "/primary/instruments/sequencing/illumina/incoming/.trash", "/primary/instruments/iscan/.trash", "/primary/projects/genomicscore/.trash","/primary/instruments/sequencing/novaseq/.trash", "/primary/instruments/sequencing/iSeq/.trash");
+@dirs = ( "/varidata/research/instruments/sequencing/NextSeq/.trash", "/varidata/research/instruments/iscan/.trash", "/varidata/research/projects/genomicscore/.trash","/varidata/research/instruments/sequencing/novaseq/.trash", "/varidata/research/instruments/sequencing/MiniSeq/.trash", "/varidata/research/instruments/sequencing/geomx/.trash/config_files","/varidata/research/instruments/sequencing/geomx/.trash/post_run_files","/varidata/research/instruments/sequencing/geomx/.trash/DCC_output");
 
 
 for my $d (@dirs)
@@ -19,8 +19,8 @@ for my $d (@dirs)
 	my $out = `ls $d`;
 	my $outfull = "$d:\n" . `ls -l $d`;
     #email("marie.adams\@vai.org,ben.johnson\@vai.org,zack.ramjan\@vai.org","$d needs to be cleaned",$outfull) if length($out) > 5;
-    email("sequencing-notifications\@vai.org","$d needs to be cleaned",$outfull) if length($out) > 5;
-    #email("zack.ramjan\@vai.org","$d needs to be cleaned", $outfull) if length($out) > 5;
+    #email("sequencing-notifications\@vai.org","$d needs to be cleaned",$outfull) if length($out) > 5;
+    email("zack.ramjan\@vai.org","$d needs to be cleaned", $outfull) if length($out) > 5;
 }
 
 
