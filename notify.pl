@@ -10,7 +10,7 @@ use Net::SMTP;
 #
 ##############################################################
 
-@dirs = ( "/varidata/research/instruments/sequencing/NextSeq/.trash", "/varidata/research/instruments/iscan/.trash", "/varidata/research/projects/genomicscore/.trash","/varidata/research/instruments/sequencing/novaseq/.trash", "/varidata/research/instruments/sequencing/MiniSeq/.trash", "/varidata/research/instruments/sequencing/geomx/.trash/config_files","/varidata/research/instruments/sequencing/geomx/.trash/post_run_files","/varidata/research/instruments/sequencing/geomx/.trash/DCC_output");
+@dirs = ( "/varidata/research/instruments/sequencing/NextSeq/.trash", "/varidata/research/instruments/iscan/.trash", "/varidata/research/projects/genomicscore/.trash","/varidata/research/instruments/sequencing/novaseq/.trash", "/varidata/research/instruments/sequencing/MiniSeq/.trash", "/varidata/research/instruments/sequencing/geomx/.trash/config_files","/varidata/research/instruments/sequencing/geomx/.trash/post_run_files","/varidata/research/instruments/sequencing/geomx/.trash/DCC_output","/varidata/researchtemp/collab/Genomics_Core/.trash");
 
 
 for my $d (@dirs)
