@@ -13,4 +13,5 @@ cd  /varidata/research/instruments/sequencing/geomx/DCC_output
 mkdir -p ../.trash/DCC_output
 find *_* -maxdepth 0 -mtime +60 -type d -exec mv {} ../.trash/DCC_output \; 
 
-chown -R marie.adams ../.trash
+chown -R marie.adams:sequencing-technology ../.trash
+chmod -R g+rwX ../.trash
