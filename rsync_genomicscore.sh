@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /varidata/research/projects/genomicscore
+cd /varidata/research/projects/genomicscore/primary
 mkdir -p .trash
 find *Lab -mtime +14 -type f > /root/.genomicsMovedfiles
 rsync -arvxlA --remove-source-files --files-from=/root/.genomicsMovedfiles ./ .trash
