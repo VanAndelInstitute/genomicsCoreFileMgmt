@@ -7,5 +7,6 @@
 /varidata/research/admin/tools/genomicsCoreFileMgmt/rsync_instruments_minion.sh
 /varidata/research/admin/tools/genomicsCoreFileMgmt/rsync_instruments_geomx.sh
 /varidata/research/admin/tools/genomicsCoreFileMgmt/rsync_collab_genomicscore.sh
+/varidata/research/admin/tools/genomicsCoreFileMgmt/rsync_instruments_aviti.sh
 /varidata/research/admin/tools/genomicsCoreFileMgmt/notifyFileAge.pl
 /varidata/research/admin/tools/genomicsCoreFileMgmt/moveFilesToAWSStaging.pl
